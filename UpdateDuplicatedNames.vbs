@@ -126,12 +126,13 @@ Sub UpdateDuplicatedNames()
             'Set xCell = xRg.Find(What:=oldName, LookIn:=xlFormulas)
             
             'Print to console the gaseous name and new MH name
-            str1 = nm.Name
-            Debug.Print str1
-            Write #n, str1
-            str2 = newName
-            Debug.Print str2
-            Write #n, str2
+            '(for debugging, uncomment below)
+            'str1 = nm.Name
+            'Debug.Print str1
+            'Write #n, str1
+            'str2 = newName
+            'Debug.Print str2
+            'Write #n, str2
             
             'Limit scope to cells on the new sheet containing formulas
             With Sheets("Refueling Station - MH").Cells.SpecialCells(xlCellTypeFormulas)
